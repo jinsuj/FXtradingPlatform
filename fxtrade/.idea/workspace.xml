@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58cf0f16-545b-4cbc-ba95-0976390aae8d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/FxTrading/src/main/java/com/fdmgroup/FxTrading/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FxTrading/src/main/java/com/fdmgroup/FxTrading/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FxTrading/src/main/java/com/fdmgroup/FxTrading/repository/SecurityQuestionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FxTrading/src/main/java/com/fdmgroup/FxTrading/repository/SecurityQuestionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxtradeFront/src/app/models/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fxtradeFront/src/app/models/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxtradeFront/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/fxtradeFront/src/app/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxtradeFront/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fxtradeFront/src/app/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxtradeFront/src/app/services/register-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/fxtradeFront/src/app/services/register-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fxtradeFront/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/fxtradeFront/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kheuHZMkKKnrzRFMlSRMMncjig" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58cf0f16-545b-4cbc-ba95-0976390aae8d" name="Default Changelist" comment="" />
+      <created>1606157471750</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606157471750</updated>
+      <workItem from="1606157494820" duration="7000" />
+    </task>
+    <servers />
+  </component>
+</project>
