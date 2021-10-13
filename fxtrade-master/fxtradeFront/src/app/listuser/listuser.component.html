@@ -1,0 +1,43 @@
+<h1 class="text-center"><u>Registered Users</u></h1>
+<div class="d-flex flex-row-reverse bd-highlight mb-2">
+  <div class="p-2 bd-highlight">
+    <select (change)="onTableSizeChange($event)" class="custom-select">
+      <option *ngFor="let size of tableSizes" [value]="size">
+        {{ size }}
+      </option>
+    </select>
+  </div>
+</div>
+<table id="dt" class="table table-dark btn-table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">User Id</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userData | paginate : {
+        itemsPerPage: tableSize,
+        currentPage: page,
+        totalItems: count
+      };
+    ">
+        <tr *ngFor="let data of userData" (click) = "goDetails(data[0])">
+            <td>{{data[0]}}</td>
+            <td>{{data[1]}}</td>
+            <td>{{data[2]}}</td>
+            <td>{{data[3]}}</td>
+          </tr>
+    </tbody>
+  </table>
+
+  <div class="d-flex justify-content-center">
+    <pagination-controls
+      responsive="true"
+      previousLabel="Prev"
+      nextLabel="Next"
+      (pageChange)="page = $event">
+    </pagination-controls>
+  </div>

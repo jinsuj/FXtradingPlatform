@@ -1,0 +1,68 @@
+<!--
+fields needed:
+  CurTo Symbol,
+  CurFrom Symbol,
+  lot size,
+  buy or sell
+
+Data needed :   // calculated or retrieved from DB or pulled from session or pull from field
+  user id   - pull from session,
+  curTo id   - pull from id by symbol,
+  curFrom id   - ^,
+  lot size (enum)  - dropdown field,
+  date  - pull from ?,
+  profit  - (depends on buy or sell) - needs to update as fields change
+
+-->
+<title>Execute A New Trade</title>
+<Header>Execute A New Trade </Header>
+<br>
+<form #makeTradeForm="ngForm"  (ngSubmit)="makeNewTrade(makeTradeForm)">
+  <table class="table table-dark">
+
+
+  <div class="form-group">
+          <label for="currencyFromSymbol">Exchange-From currency: </label>
+          <b>{{currencyfrom}}</b>
+      </div>
+
+
+        <div class="form-group">
+      <label for="currencyToSymbol">Exchange-To currency: </label>
+      <b>{{currencyto}}</b>
+  </div>
+
+<div id="alternatingColor">
+  <div class="form-group">
+    <label for="lotSize">Select Lot Size </label>
+    <select class="form-control" id="lotSize" name="lotSize" required [(ngModel)]="lotS.value">
+        <option value=null>Select Lot Size</option>
+        <option *ngFor="let value of lotSizes" [ngValue]="value">{{lotSizesEnum[value]}} </option>
+    </select>
+</div>
+
+  <div class="form-group">
+      <label for="TradeType">Buy or Sell</label>
+      <select class="form-control" id="TradeType" name="isBuy" [(ngModel)]="isBuy">
+        <option value=null>Select Buy or Sell</option>
+        <option value = "true">BUY</option>
+        <option value = "false">SELL</option>
+      </select>
+  </div>
+</div>
+
+<!-- <div class="form-group">
+<button>{{isBuy ? 'Buy' : 'Sell'}}</button>
+</div> -->
+<div>
+    <button type="submit" class="fadeIn fourth">Submit</button>
+
+    <div class="form-group" style="float: right; width: 250">
+    <form (ngSubmit)="cancelTrade()">
+    <button type="submit" class="fadeIn fourth">Back</button>
+  </form>
+</div>
+</div>
+</table>
+  </form>
+

@@ -1,0 +1,24 @@
+<h1 class="text-center"><u>Exchange</u></h1>
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Contract</th>
+        <th scope="col">Quotation</th>
+        <th scope="col">Bid Price</th>
+        <th scope="col">Ask Price</th>
+        <th scope="col">Spread</th>
+        <th scope="col">Exchange Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of exchangeData">
+        <td>{{data[4]}}/{{data[5]}}</td>
+        <td>{{data[4]}}-{{data[5]}}</td>
+        <td>{{data[0]}}</td>
+        <td>{{data[1]}}</td>
+        <td>{{data[2]}}</td>
+        <td>{{data[3]}}</td>
+        <input type="submit" (click) = "goTrade(data)" class="fadeIn fourth" value="Trade">
+      </tr>
+    </tbody>
+  </table>

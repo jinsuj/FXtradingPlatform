@@ -1,0 +1,28 @@
+header{
+    width:100%;
+}
+
+a {
+    color: white;
+    overflow: hidden;
+  }
+
+  a {
+    background: linear-gradient(90deg, #56baed, #56baed 50%, white 50%);
+  }
+
+  a {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+  }
+
+  a {
+    transition: background-position 275ms ease;
+  }
+
+  a:hover {
+    background-position: 0 100%;
+  }

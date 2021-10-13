@@ -1,0 +1,31 @@
+<header>
+    <nav class="navbar  navbar-expand-sm navbar-dark bg-dark">
+        <div><a routerLink="/home" class="navbar-brand">FX Trading</a></div>
+
+        <ul class="navbar-nav mr-auto">
+            <div *ngIf="(isLoggedIn | async)">
+            <li class="nav-item active"><a class="nav-link" routerLink="/exchange">Trade</a></li>
+            </div>
+            <div *ngIf="(isLoggedIn | async)">
+            <li class="nav-item active"><a class="nav-link" routerLink="/trade-history">Trade History</a></li>
+            </div>
+            <div *ngIf="(isAdmin | async)">
+              <li class="nav-item active"><a class="nav-link" routerLink="/userList">Users</a></li>
+            
+          </div>
+        </ul>
+        <ul class="navbar-nav">
+          <div *ngIf="!(isLoggedIn | async)">
+            <li class="nav-item active"><a class="nav-link" routerLink="/register">Register</a></li>
+          </div>
+          <li class="nav-item">
+            <div *ngIf="!(isLoggedIn | async)">
+              <a class="nav-link active" href="/login">Login</a>
+          </div>
+          <div *ngIf="(isLoggedIn | async)">
+              <a class = "nav-link active" href="/exchange" (click)="logOut()">LogOut</a>
+          </div>
+          </li>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,84 @@
+
+    <form (ngSubmit)="onSubmit()">
+        <h3>Register</h3>
+      <div class="scroll" >
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstName" name="firstName" required [(ngModel)]="user.first_name" pattern="[A-Z][A-Za-z,',\p{Pd}, ]{0,35}[A-Za-z,.]" placeholder="Enter First Name">
+
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" name="lastName" required [(ngModel)]="user.last_name" pattern="[A-Z][A-Za-z,',\p{Pd}, ]{0,35}[A-Za-z,.]" placeholder="Enter Last Name">
+            </div>
+        </div>
+        <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" required [(ngModel)]="user.email" pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=.]).*$" required [(ngModel)]="user.password" placeholder="Password" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Password does not meet requirements' : ''); if(this.checkValidity()) form.confirmPassword.pattern = this.value;">
+            <small id="passwordHelp" class="form-text text-muted">Passwords need at least 8 characters, one uppercase character, lowercase character, digit, symbol, and no whitespaces</small>
+
+        </div>
+            <div class="form-group col-md-6">
+                <label for="password">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" onchange="this.reportValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" required>
+            </div>
+        </div>
+
+        <h3>Security Questions</h3>
+        <h5>Question 1</h5>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <!-- <label for="securityQuestion1"></label> -->
+                <select class="form-control" id="securityQuestion1" name="securityQuestion1" required [(ngModel)]="user.questions[0].question">
+                    <option value="">Select Security Question</option>
+                    <option *ngFor="let question of questions" [ngValue]="question">{{questionEnum[question]}} </option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <!-- <label for="firstSecurityAnswer"></label> -->
+                <input type="text" class="form-control" id="securityAnswer1" name="securityAnswer1" required [(ngModel)]="user.questions[0].answer" placeholder="First Answer" required>
+            </div>
+        </div>
+
+        <h5>Question 2</h5>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <!-- <label for="securityQuestion1"></label> -->
+                <select class="form-control" id="securityQuestion2" name="securityQuestion2" required [(ngModel)]="user.questions[1].question">
+                    <option value="">Select Security Question</option>
+                    <option *ngFor="let question of questions" [ngValue]="question">{{questionEnum[question]}} </option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <!-- <label for="firstSecurityAnswer"></label> -->
+                <input type="text" class="form-control" id="securityAnswer2" name="securityAnswer2" required [(ngModel)]="user.questions[1].answer" placeholder="Second Answer" required>
+            </div>
+        </div>
+
+        <h5>Question 3</h5>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <!-- <label for="securityQuestion1"></label> -->
+                <select class="form-control" id="securityQuestion3" name="securityQuestion3" required [(ngModel)]="user.questions[2].question">
+                    <option value="">Select Security Question</option>
+                    <option *ngFor="let question of questions" [ngValue]="question">{{questionEnum[question]}} </option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <!-- <label for="firstSecurityAnswer"></label> -->
+                <input type="text" class="form-control" id="securityAnswer3" name="securityAnswer3" required [(ngModel)]="user.questions[2].answer" placeholder="Third Answer" required>
+            </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>

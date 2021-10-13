@@ -1,0 +1,13 @@
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <h1>Security Question</h1>
+            <span>{{questions[0]}}</span>
+            <input type="text" class="form-control" id="ans1"
+            [(ngModel)]="ans1"
+            name="ans1"
+            />
+            <button id="submitButton" (click)="submitAns()" class="btn btn-success">Submit</button>
+        </tr>
+    </tbody>
+</table>
